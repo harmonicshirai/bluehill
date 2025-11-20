@@ -1,0 +1,66 @@
+.strengths-section {
+    background-color: white;
+}
+
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.strength-card {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--color-gray-medium);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+}
+
+.strength-card:hover {
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-md);
+}
+
+.strength-icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-gray-light);
+    color: var(--color-navy);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.strength-card:hover .strength-icon-box {
+    background-color: var(--color-navy);
+    color: var(--color-gold);
+    transform: scale(1.1);
+}
+
+.strength-title {
+    font-size: 1.3rem;
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.strength-desc {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .strengths-grid {
+        gap: 2rem;
+    }
+
+    .strength-card {
+        padding: 1.5rem;
+    }
+}

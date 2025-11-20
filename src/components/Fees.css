@@ -1,0 +1,112 @@
+.fees-section {
+    background-color: white;
+}
+
+.fees-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.fees-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.fee-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background-color: white;
+    border: 1px solid var(--color-gray-medium);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.fee-item:hover {
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-sm);
+    transform: translateX(5px);
+}
+
+.fee-title-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.fee-icon {
+    color: var(--color-gold);
+    flex-shrink: 0;
+}
+
+.fee-title {
+    font-size: 1.1rem;
+    color: var(--color-navy);
+    font-weight: 700;
+}
+
+.fee-price-box {
+    text-align: right;
+    margin: 0 2rem;
+}
+
+.fee-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+.fee-tax {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+}
+
+.fee-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    width: 200px;
+    text-align: right;
+}
+
+.fee-caveat {
+    background-color: var(--color-gray-light);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .fee-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .fee-title-box {
+        width: 100%;
+    }
+
+    .fee-price-box {
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+    }
+
+    .fee-note {
+        width: 100%;
+        text-align: left;
+        padding-top: 0.5rem;
+        border-top: 1px dashed var(--color-gray-medium);
+    }
+}

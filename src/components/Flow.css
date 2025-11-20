@@ -1,0 +1,105 @@
+.flow-section {
+    background-color: var(--color-gray-light);
+}
+
+.flow-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.flow-step {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flow-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-gray-medium);
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    line-height: 1;
+}
+
+.flow-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-navy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+}
+
+.flow-title {
+    font-size: 1.1rem;
+    color: var(--color-navy);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.flow-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* Arrow between steps (Desktop) */
+.flow-arrow {
+    display: none;
+    /* Hidden by default, can add CSS arrow if needed but flex gap is cleaner */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 960px) {
+    .flow-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flow-step {
+        width: 100%;
+        max-width: 500px;
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .flow-icon-wrapper {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .flow-content {
+        flex-grow: 1;
+    }
+
+    .flow-number {
+        top: auto;
+        bottom: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+}
